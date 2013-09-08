@@ -4,5 +4,32 @@
         xmlns="http://java.sun.com/xml/ns/javaee"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>org.softwarehelps.logserver.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>security</servlet-name>
+        <servlet-class>org.softwarehelps.logserver.SecurityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>security</servlet-name>
+        <url-pattern>/security</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>securityFilter</filter-name>
+        <filter-class>org.softwarehelps.logserver.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>/security</url-pattern>
+    </filter-mapping>    
 </web-app>

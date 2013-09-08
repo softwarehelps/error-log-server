@@ -1,0 +1,41 @@
+<html>
+    ${if false} <!--
+    /diar/WEB-INF/templates/layout/twoColumn.html
+  
+    History:
+     4/ 4/13 PD valign="top" table layout
+     4/ 5/13 PD put calendars from day.calendar1 day.calendar2
+    -->${end}
+    <head>
+        <title>${pageTitle}</title>
+        <link rel="stylesheet" type="text/css" href="/style.css" 
+              media="screen" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <table class="table">
+            <tr>
+                <td class="left">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="right">
+                    <nav class="user">${userBlock}</nav>
+                    <div class="logo"><a class="logo" 
+                                         href="${settings.URLs.home}"><img 
+                                src="/images/ducks_in_a_row.png" 
+                                width="304" height="109" alt="ducks in a row" 
+                                title="Beyond the to do list" /></a></div>    
+                </td>
+            </tr>
+            <tr valign="top">
+                <td class="left boxed">
+                    ${day.calendar1}
+                    ${day.calendar2}
+                </td>
+                <td>&nbsp;</td>
+                <td class="right boxed" rowspan="2">${content}</td>
+            </tr>
+            <tr></tr>
+        </table>
+    </body>
+</html>

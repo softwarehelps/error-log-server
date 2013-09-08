@@ -1,0 +1,155 @@
+/* diar/war/style.css
+ *
+ * History:
+ *  3/26/13 PD add .startFixed, .startFloating which are like .event but
+ *             highlight the time field differently for fixed start events
+ *             and floating start events.
+ *  3/27/13 PD added .leftCol to hold calendar navigation feature
+ *  3/28/13 PD added .container to hold everything and support column layout
+ *  3/30/13 PD simplify and add features back one at a time 
+ *  4/ 3/13 PD navCal
+ *  4/ 4/13 PD copy style2.css back to style.css and phase out style2.css
+ *  4/ 4/13 PD highlight current date in calendar
+ *
+ * TODO: 4 fix .leftCol to always sit close to center pannel problably by
+ *         surrounding both panels with another div that is centered
+ */
+
+body
+{
+    background-image:url('images/logBackground.png');
+    background-color:#4eabbc;
+    font-family: sans-serif;
+}
+
+/* 3 column design: made with .header, .main, .column1 and .column2
+   in our site the side bar will hold some little calendar navigators, we 
+   should see how small we can make them, and have them still highly functional.
+   I like the one that's in Google Calendar, lets see how that one is 
+   constructed.
+*/
+.table {
+    margin: 0 auto;
+}
+.left {
+    /* left must be wide enough for navigation calendars
+     */
+    width: 180px;
+    float: left;
+    margin: 0 8px;
+    padding: 8px;
+}
+.right {
+    /* right width has smallest and largest limits
+     */
+    float: left;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 8px;
+    padding: 8px;
+}
+
+.boxed {
+    /*  bottom elements are white background, black boarder + effects
+     *  include padding
+     */
+    background-color: white;
+    -moz-box-shadow:1px 1px 4px #000;
+    -webkit-box-shadow:1px 1px 4px #000;    
+    box-shadow:1px 1px 4px #000;
+    -moz-border-radius:7px;
+    border-radius:7px;
+}
+
+.user {
+    /* login logout settings block top right corner of page 
+     */
+    float: right;
+}
+
+.logo {
+    /* left part of main (right) column
+     * formatting for alternative text if image doesn't show
+     * tweak location to align curves in image with box below
+     */
+    float: left;    
+    position: relative;
+    left: -8px;
+    font-size: x-large;
+    font-weight: bold;
+}
+header {
+    /* big bold text for title of page */
+    font-size: x-large;
+}
+a.logo, a.event, a.startFixed, a.startFloating {
+    /* anchors that aren't blue or underlined
+     */
+    color: black;
+    text-decoration: none;
+}
+a.logo:visited, a.event:visited, a.startFixed:visited, a.startFloating:visited {
+    /* visited anchors aren't purple
+     */
+    color: black;
+}
+a.button {
+    background-color:#fd3200;
+    box-shadow:1px 1px 4px #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    width:80px;
+    height:30px;
+    -moz-border-radius-topleft:4px;
+    border-top-left-radius:4px;
+    -moz-border-radius-topright:4px;
+    border-top-right-radius:4px;
+    -moz-border-radius-bottomleft:4px;
+    border-bottom-left-radius:4px;
+    -moz-border-radius-bottomright:4px;
+    border-bottom-right-radius:4px;    
+    color:#fff;
+    text-shadow:#000 1px 1px 0px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+}
+.selected {
+    background-color:#ffff0e;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+.show {
+    color: black;
+}
+
+/* event elements */
+.event,.startFixed,.startFixed {
+    margin-left: 4px;
+    margin-right: 4px;    
+}
+.startFixed {
+    font-weight: bold;
+}
+.startFloating {
+    font-weight: normal;
+}
+.navCal {
+    margin: 0 auto;
+    font-size: x-small;
+    text-align: right;
+}
+.navCal .today {
+    background-color: yellow;
+    border: 1px;
+    border-color: orangered;
+    border-style: solid;
+    
+}
