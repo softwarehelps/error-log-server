@@ -1,4 +1,4 @@
-gae-log-server
-==============
+error-log-server
+================
 
 Save and manage java.util.logging log records.

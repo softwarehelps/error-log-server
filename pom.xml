@@ -6,7 +6,7 @@
     <version>0.1-SNAPSHOT</version>
 
     <groupId>org.softwarehelps</groupId>
-    <artifactId>gae-log-server</artifactId>
+    <artifactId>error-log-server</artifactId>
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
@@ -84,5 +84,5 @@
             </plugin>
         </plugins>
     </build>
-
+    <name>error-log-server</name>
 </project>
