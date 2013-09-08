@@ -32,6 +32,11 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.floreysoft</groupId>
+            <artifactId>jmte</artifactId>
+            <version>3.0</version>
+        </dependency>
 
         <!-- Test Dependencies -->
         <dependency>
